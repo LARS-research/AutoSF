@@ -1,0 +1,2 @@
+Dataset created from YAGO3 dumps from https://github.com/TimDettmers/ConvE
+YAGO3 dumps are under the CC-BY license
