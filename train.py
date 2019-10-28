@@ -12,7 +12,7 @@ import numpy as np
 import torch.multiprocessing as mp
 
 parser = argparse.ArgumentParser(description="Parser for AutoSF")
-parser.add_argument('--task_dir', type=str, default='../KG_Data/FB15K237', help='the directory to dataset')
+parser.add_argument('--task_dir', type=str, default='KG_Data/FB15K237', help='the directory to dataset')
 parser.add_argument('--optim', type=str, default='adagrad', help='optimization method')
 parser.add_argument('--lamb', type=float, default=0.2, help='set weight decay value')
 parser.add_argument('--decay_rate', type=float, default=1.0, help='set learning rate decay value')
