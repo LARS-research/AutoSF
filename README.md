@@ -21,12 +21,8 @@ Install PyTorch (>0.4.0)
 
 Get this repo
 
-    git clone https://github.com/yzhangee/NSCaching
-    cd NSCaching
-Get dataset from THUNLP-OpenKE
-  
-    git clone https://github.com/thunlp/OpenKE
-    mv OpenKE/benchmarks ../KG_Data
+    git clone https://github.com/yzhangee/AutoSF
+    cd AutoSF
 
 Reproducing the searching procedure
     
