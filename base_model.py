@@ -73,7 +73,7 @@ class BaseModel(object):
                     best_str = out_str
                 if best_mrr < self.args.thres:
                     print('\tearly stopped in Epoch:{}, best_mrr:{}'.format(epoch+1, best_mrr), self.model.struct)
-                    return best_str
+                    return best_mrr, best_str
         return best_mrr, best_str
 
     def prox_operator(self,):

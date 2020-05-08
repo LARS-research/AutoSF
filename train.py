@@ -19,7 +19,7 @@ parser.add_argument('--decay_rate', type=float, default=1.0, help='set learning 
 parser.add_argument('--n_dim', type=int, default=128, help='set embedding dimension')
 parser.add_argument('--parrel', type=int, default=1, help='set gpu #')
 parser.add_argument('--lr', type=float, default=0.5, help='set learning rate')
-parser.add_argument('--thres', type=float, default=0.22, help='threshold for early stopping')
+parser.add_argument('--thres', type=float, default=0.0, help='threshold for early stopping')
 parser.add_argument('--n_epoch', type=int, default=1000, help='number of training epochs')
 parser.add_argument('--n_batch', type=int, default=2048, help='batch size')
 parser.add_argument('--epoch_per_test', type=int, default=250, help='frequency of testing')
