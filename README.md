@@ -23,6 +23,7 @@ Get this repo
 
     git clone https://github.com/yzhangee/AutoSF
     cd AutoSF
+    tar -zvxf KG_Data.tar.gz 
 
 Reproducing the searching procedure
     
