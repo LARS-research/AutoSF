@@ -11,7 +11,7 @@ from predict import Predictor
 import numpy as np
 import torch.multiprocessing as mp
 
-parser = argparse.ArgumentParser(description="Parser for AutoSF")
+parser = argparse.ArgumentParser(description="Parser for AutoSF (search)")
 parser.add_argument('--task_dir', type=str, default='KG_Data/FB15K237', help='the directory to dataset')
 parser.add_argument('--optim', type=str, default='adagrad', help='optimization method')
 parser.add_argument('--lamb', type=float, default=0.2, help='set weight decay value')
@@ -25,6 +25,7 @@ parser.add_argument('--n_batch', type=int, default=2048, help='batch size')
 parser.add_argument('--epoch_per_test', type=int, default=250, help='frequency of testing')
 parser.add_argument('--test_batch_size', type=int, default=100, help='test batch size')
 parser.add_argument('--filter', type=bool, default=True, help='whether do filter in testing')
+parser.add_argument('--mode', type=str, default='search', help='which mode this code is running for')
 parser.add_argument('--out_file_info', type=str, default='', help='extra string for the output file name')
 
 
@@ -52,7 +53,7 @@ test_data  = [torch.LongTensor(vec) for vec in test_data]
 
 
 def run_model(i, state):
-    print('new:', i, state, len(state))
+    print('newID:', i, state, len(state))
     args.perf_file = os.path.join(directory, dataset + '_perf.txt')
     torch.cuda.empty_cache()
     # sleep to avoid multiple gpu occupy
@@ -64,7 +65,7 @@ def run_model(i, state):
     tester_tst = lambda: model.test_link(test_data, test_head_filter, test_tail_filter)
     best_mrr, best_str = model.train(train_data, tester_val, tester_tst)
     with open(args.perf_file, 'a') as f:
-        print('structure:', i, state, '\twrite best mrr', best_str)
+        print('ID:', i, 'structure:%s'%(str(state)), '\tvalid mrr', best_mrr)
         for s in state:
             f.write(str(s) + ' ')
         f.write('\t\tbest_performance: '+best_str)

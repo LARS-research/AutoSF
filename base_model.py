@@ -63,9 +63,11 @@ class BaseModel(object):
 
             if (epoch+1) %  self.args.epoch_per_test == 0:
                 # output performance 
-                valid_mrr, valid_mr, valid_10 = tester_val()
-                test_mrr,  test_mr,  test_10 = tester_tst()
-                out_str = '%.4f\t%.4f\t\t%.4f\t%.4f\n'%(valid_mrr, valid_10, test_mrr, test_10)
+                valid_mrr, valid_mr, valid_1, valid_10 = tester_val()
+                test_mrr,  test_mr,  test_1,  test_10  = tester_tst()
+                out_str = '$valid mrr:%.4f, H@1:%.4f, H@10:%.4f\t\t$test mrr:%.4f, H@1:%.4f, H@10:%.4f\n'%(valid_mrr, valid_1, valid_10, test_mrr, test_1, test_10)
+                if not self.args.mode == 'search':
+                    print(out_str)
 
                 # output the best performance info
                 if valid_mrr > best_mrr:
@@ -113,12 +115,13 @@ class BaseModel(object):
         tail_probs = np.concatenate(tail_probs) * tail_filter
         head_ranks = cal_ranks(head_probs, label=heads.data.numpy())
         tail_ranks = cal_ranks(tail_probs, label=tails.data.numpy())
-        h_mrr, h_mr, h_h10 = cal_performance(head_ranks)
-        t_mrr, t_mr, t_h10 = cal_performance(tail_ranks)
+        h_mrr, h_mr, h_h1, h_h10 = cal_performance(head_ranks)
+        t_mrr, t_mr, t_h1, t_h10 = cal_performance(tail_ranks)
         mrr = (h_mrr + t_mrr) / 2
         mr = (h_mr + t_mr) / 2
+        h1  = (h_h1  + t_h1 ) / 2
         h10 = (h_h10 + t_h10) / 2
-        return mrr, mr, h10
+        return mrr, mr, h1, h10
 
 
 

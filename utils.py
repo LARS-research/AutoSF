@@ -2,10 +2,13 @@ import random
 import numpy as np
 
 def plot_config(args):
-    out_str = "\noptim:{} lr:{} lamb:{}, d:{}\n".format(
-            args.optim, args.lr, args.lamb, args.n_dim)
+    out_str = "\noptim:{} lr:{} lamb:{}, d:{}, decay_rate:{}, batch_size:{}\n".format(
+            args.optim, args.lr, args.lamb, args.n_dim, args.decay_rate, args.n_batch)
+    print(out_str)
     with open(args.perf_file, 'a') as f:
         f.write(out_str)
+
+
 
 def inplace_shuffle(*lists):
     idx = []
@@ -56,8 +59,9 @@ def cal_ranks(probs, label):
     ranks = np.nonzero(find_target)[1] + 1
     return ranks
 
-def cal_performance(ranks, topk=10):
+def cal_performance(ranks):
     mrr = (1. / ranks).sum() / len(ranks)
     m_r = sum(ranks) * 1.0 / len(ranks)
-    h_k = sum(ranks<=topk) * 1.0 / len(ranks)
-    return mrr, m_r, h_k
+    h_1 = sum(ranks<=1) * 1.0 / len(ranks)
+    h_10 = sum(ranks<=10) * 1.0 / len(ranks)
+    return mrr, m_r, h_1, h_10

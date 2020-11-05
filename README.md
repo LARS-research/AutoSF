@@ -7,6 +7,7 @@ Readers are welcomed to fork this repository to reproduce the experiments and fo
       title={AutoSF: Searching Scoring Functions for Knowledge Graph Embedding},
       author={Zhang, Yongqi and Yao, Quanming and Dai, Wenyuan and Chen, Lei},
       booktitle={2020 IEEE 36th International Conference on Data Engineering (ICDE)},
+      pages={433--444},
       year={2020},
       organization={IEEE}
     }
@@ -25,19 +26,20 @@ Get this repo
     cd AutoSF
     tar -zvxf KG_Data.tar.gz 
 
-Reproducing the searching procedure
+Reproducing the searching/fine-tuning/evaluation procedure, please refer to the bash file "run.sh"
     
-    bash run.py
+    bash run.sh
 
 
-searched_SFs.txt: 
+Explaination of the searched SFs in the file "searched_SFs.txt": 
 
 - The first 4 values (a,b,c,d) represent h_1 * r_1 * t_a + h_2 * r_2 * t_b + h_2 * r_2 * t_c + h_2 * r_2 * t_d. 
 
 - For the others, every 4 values represent one block: index of r, index of h, index of t, sign.
 
+You can also rely on the "evaluate.py" file to evaluate the searched SFs by manually setting the struct variable.
 
-    
+
 
 Related AutoML papers (ML Research group in 4Paradigm)
 - Efficient Neural Interaction Functions Search for Collaborative Filtering. WWW 2020 [paper](https://arxiv.org/pdf/1906.12091.pdf) [code](https://github.com/xiangning-chen/SIF)

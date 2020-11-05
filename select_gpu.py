@@ -1,6 +1,5 @@
 import subprocess
 import logging
-import torch
 
 def select_gpu():
     nvidia_info = subprocess.run('nvidia-smi', stdout=subprocess.PIPE)
@@ -38,12 +37,10 @@ def select_gpu():
     for i in range(0,len(gpu_mem)):
         if i not in gpu_occupied:
             logging.info('Automatically selected GPU %d because it is vacant.', i)
-            occupy = torch.zeros((8,)).cuda(i)
             return i
     for i in range(0,len(gpu_mem)):
         if gpu_mem[i] == min(gpu_mem):
             logging.info('All GPUs are occupied. Automatically selected GPU %d because it has the most free memory.', i)
-            occupy = torch.zeros((8,)).cuda(i)
             return i
 
 if __name__ == '__main__':
