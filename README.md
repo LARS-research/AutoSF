@@ -1,6 +1,8 @@
 # AutoSF
 The code for our paper ["AutoSF: Searching Scoring Functions for Knowledge Graph Embedding"](https://arxiv.org/pdf/1904.11682.pdf) and this paper has been accepted by ICDE2020.
 
+News: (2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/AutoSF-OGB) for Open Graph Benchmark is released.
+
 Readers are welcomed to fork this repository to reproduce the experiments and follow our work. Please kindly cite our paper
 
     @inproceedings{zhang2019autosf,
