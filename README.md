@@ -81,4 +81,5 @@ Readers are welcomed to fork this repository to reproduce the experiments and fo
     }
     
 ## Acknowledgement
-    This repository is developed by [Zhanke Zhou](https://github.com/AndrewZhou924) as an intern at 4Paradigm Inc. mentored by [Yongqi Zhang](https://yzhangee.github.io/).
+
+This repository is developed by [Zhanke Zhou](https://github.com/AndrewZhou924) as an intern at 4Paradigm Inc. mentored by [Yongqi Zhang](https://yzhangee.github.io/).
