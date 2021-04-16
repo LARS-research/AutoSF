@@ -1,7 +1,5 @@
 # AutoSF-OGB
 
-This repository is developed by [Zhanke Zhou](https://github.com/AndrewZhou924) as an intern at 4Paradigm Inc. under the guidance of [Yongqi Zhang](https://yzhangee.github.io/).
-
 The scoring functions are searched by the paper ["AutoSF: Searching Scoring Functions for Knowledge Graph Embedding"](https://arxiv.org/pdf/1904.11682.pdf), which has been published in ICDE 2020, based on the [code](https://github.com/AutoML-4Paradigm/AutoSF). The evaluation implementation of AutoSF is customized for [Open Graph Benchmark (OGB)](https://ogb.stanford.edu/) datasets ([ogbl-biokg](https://ogb.stanford.edu/docs/leader_linkprop/#ogbl-biokg) and [ogbl-wikikg2](https://ogb.stanford.edu/docs/leader_linkprop/#ogbl-wikikg2)) based on [OGB examples](https://github.com/snap-stanford/ogb/tree/master/examples/linkproppred). Thanks for their contributions.
 
 ## Introduction to AutoSF
@@ -83,4 +81,4 @@ Readers are welcomed to fork this repository to reproduce the experiments and fo
     }
     
 ## Acknowledgement
-    This repository is developed by Zhanke Zhou as an intern at 4Paradigm Inc. mentored by Dr.Yongqi Zhang.
+    This repository is developed by [Zhanke Zhou](https://github.com/AndrewZhou924) as an intern at 4Paradigm Inc. mentored by [Yongqi Zhang](https://yzhangee.github.io/).
