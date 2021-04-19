@@ -4,10 +4,9 @@ The code for our paper ["AutoSF: Searching Scoring Functions for Knowledge Graph
 News: (2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/AutoSF-OGB) for Open Graph Benchmark is released.
 
 
-<p align="center">
-    <img src="./figs/biokg-leaderboard.png" width="500" />
-    <img src="./figs/wikikg2-leaderboard.png" width="500"  />
-</p>
+<img src="./figs/biokg-leaderboard.png" width="600" />
+<img src="./figs/wikikg2-leaderboard.png" width="600"  />
+
 
 Readers are welcomed to fork this repository to reproduce the experiments and follow our work. Please kindly cite our paper
 
