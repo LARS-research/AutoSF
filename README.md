@@ -5,8 +5,8 @@ News: (2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/Auto
 
 
 <p align="center">
-    <img src="./figs/biokg-leaderboard.png" width="350" />
-    <img src="./figs/wikikg2-leaderboard.png" width="350"  />
+    <img src="./figs/biokg-leaderboard.png" width="500" />
+    <img src="./figs/wikikg2-leaderboard.png" width="500"  />
 </p>
 
 Readers are welcomed to fork this repository to reproduce the experiments and follow our work. Please kindly cite our paper
