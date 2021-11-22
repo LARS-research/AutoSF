@@ -185,18 +185,10 @@ class StateSpace:
         with open(filename, 'r') as f:
             lines = f.readlines()
             for line in lines:
-                l = line.strip().split()
-                state = []
-                flag = True
-                for c in l:
-                    if c[0] == 'b':
-                        flag = False
-                        continue
-                    if flag:
-                        state.append(int(c))
-                    else:
-                        mrr = float(c)
-                        break
+                state, result = line.strip().split(']')
+                state = state[1:].split(',')
+                state = [int(s.strip()) for s in state]
+                mrr = float(result.split(':')[1].split(',')[0].strip())
                 self.pred_x.append(self.state2srf(state))
                 #self.pred_x.append(self.state2onehot(state))
                 self.pred_y.append(mrr)

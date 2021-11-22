@@ -31,6 +31,8 @@ parser.add_argument('--out_file_info', type=str, default='', help='extra string 
 
 args = parser.parse_args()
 
+assert args.n_epoch>=args.epoch_per_test, 'Should have at least one evaluation!'
+
 dataset = args.task_dir.split('/')[-1]
 
 directory = 'results'
@@ -66,9 +68,7 @@ def run_model(i, state):
     best_mrr, best_str = model.train(train_data, tester_val, tester_tst)
     with open(args.perf_file, 'a') as f:
         print('ID:', i, 'structure:%s'%(str(state)), '\tvalid mrr', best_mrr)
-        for s in state:
-            f.write(str(s) + ' ')
-        f.write('\t\tbest_performance: '+best_str)
+        f.write(str(list(state))+'\t'+best_str)
     torch.cuda.empty_cache()
     return best_mrr
 
