@@ -1,7 +1,11 @@
 # AutoSF
-The code for our paper ["AutoSF: Searching Scoring Functions for Knowledge Graph Embedding"](https://arxiv.org/pdf/1904.11682.pdf) and this paper has been accepted by ICDE2020.
+The code for our paper conference paper ["AutoSF: Searching Scoring Functions for Knowledge Graph Embedding"](https://arxiv.org/pdf/1904.11682.pdf) in ICDE 2020 and the journal extension [AutoSF+: "Bilinear Scoring Function Search for Knowledge Graph Learning"](https://arxiv.org/pdf/2107.00184.pdf) in TPAMI 2022.
 
-News: (2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/AutoSF-OGB) for Open Graph Benchmark is released.
+News: 
+
+(2022.3) AutoSF+ has been accepted as a research paper in TPAMI! (the code for AutoSF+ will be released soon in this repo).
+
+(2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/AutoSF-OGB) for Open Graph Benchmark is released.
 
 <p align="center">
     <img src="./figs/biokg-leaderboard.png" width="750" />
@@ -13,13 +17,12 @@ News: (2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/Auto
 
 Readers are welcomed to fork this repository to reproduce the experiments and follow our work. Please kindly cite our paper
 
-    @inproceedings{zhang2019autosf,
-      title={AutoSF: Searching Scoring Functions for Knowledge Graph Embedding},
-      author={Zhang, Yongqi and Yao, Quanming and Dai, Wenyuan and Chen, Lei},
-      booktitle={2020 IEEE 36th International Conference on Data Engineering (ICDE)},
-      pages={433--444},
-      year={2020},
-      organization={IEEE}
+    @article{zhang2022bilinear,
+          title={Bilinear Scoring Function Search for Knowledge Graph Learning},
+          author={Zhang, Yongqi and Yao, Quanming and Kwok, James T},
+          journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+          year={2022},
+          publisher={IEEE}
     }
 
 ## Instructions
