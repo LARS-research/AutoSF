@@ -3,7 +3,7 @@ The code for our paper conference paper ["AutoSF: Searching Scoring Functions fo
 
 News: 
 
-(2022.3) AutoSF+ has been accepted as a research paper in TPAMI! (the code for AutoSF+ will be released soon in this repo).
+(2022.3) AutoSF+ has been accepted as a research paper in TPAMI!
 
 (2021.4) [AutoSF-OGB](https://github.com/AutoML-4Paradigm/AutoSF/tree/AutoSF-OGB) for Open Graph Benchmark is released.
 
